@@ -3,43 +3,49 @@
   <head>
     <title>1100고지</title>
     <meta charset="utf-8">
-    <style>
-      .jj{
-        font-weight:bold;
-      }
-      #first{
-        color:powderblue;
-      }
-      span{
-        color:coral;
-      }
-    </style>
   </head>
 
   <body>
-    <h1><a href="index.html"><font color="coralblue">제주도</font></a></h1>
-    <input type="button" value="Hi" onclick="alert('Hi')">
-    <input type="button" value="night" onclick="
-      document.querySelector('body').style.backgroundColor = 'black';
-      document.querySelector('body').style.color = 'white';
-    ">
-    <input type="button" value="day" onclick="
-      document.querySelector('body').style.backgroundColor = 'white';
-      document.querySelector('body').style.color = 'black';
+    <h1><a href="index.html">제주도</a></h1>
+    <input id="night_day" type="button" value="night" onclick="
+      var target=document.querySelector('body');
+      if(this.value === 'night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = 'powderblue';
+          i = i + 1;
+        }
+      } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = 'blue';
+          i = i + 1;
+        }
+      }
     ">
     <ol>
-      <li><a href="1.html"><font color="green">함덕해수욕장</font></a></li>
-      <li><a href="2.html"><font color="green">1100고지</font></a></li>
-      <li><a href="3.html"><font color="green">성산일출봉</font></a></li>
-      <li><a href="4.html"><font color="green">한라산</font></a></li>
+      <li><a href="1.html">함덕해수욕장</a></li>
+      <li><a href="2.html">1100고지</a></li>
+      <li><a href="3.html">성산일출봉</a></li>
+      <li><a href="4.html">한라산</a></li>
     </ol>
     <h2>1100고지</h2>
     <p>
-      <a href="https://map.naver.com/v5/search/%EC%A0%9C%EC%A3%BC%EB%8F%84%20%EC%B2%9C%EB%B0%B1%EA%B3%A0%EC%A7%80/place/17063361?placePath=%3Fentry=pll%26from=nx%26fromNxList=true&c=14076765.2643487,3942910.7925205,15,0,0,0,dh" target="_blank" title="1100고지 위치"><span id="first" class="jj">1100고지</span><a/> 는 제주 서귀포시 색달동에 있는 관광명소로, <u><span class="jj">해발 1100미터</span></u>에 위치한 곳이다. 이곳에는 겨울이 되면 눈이 내려 예쁜 설경을 볼 수 있는 장소로, 풍경이 좋은 곳으로 알려져 있다.
+      1100고지는 제주 서귀포시 색달동에 있는 관광명소로, <u>해발 1100미터</u>에 위치한 곳이다. 이곳에는 겨울이 되면 눈이 내려 예쁜 설경을 볼 수 있는 장소로, 풍경이 좋은 곳으로 알려져 있다.
       <br><br><img src="snowing.jpg" width="100%">
     </p>
     <p style="margin-top:30px;">
-      ​1100고지 습지는 <u><span class="jj">한라산 고원지대에 형성된 대표적인 산지습지로서</span></u> 16개 이상의 습지가 불연속적으로 분포하고 있으며, 이 습지들을 따라 2009년에 습지보호지역이 설정되었으며 같은 해에 람사르 습지에 등록되었다.​​​​​​​​​​ <span class="jj">1100고지 습지</span>의 동물과 식생환경에 대한 안내문이 탐방로 곳곳에 설치되어 있어 습지의 정보를 알 수 있다. 이곳에는 한라산에서만 서식하는 멸종위기 1급의 야생동물인 매와 야생생물 등이 존재하고 있으며, 습지의 낮은 곳에 고여있는 물은 야생동물의 식수원 역할을 하고 있다. 습지 안에는 나무로 이루어진 자연 생태탐방로가 있어 걸으면서 습지를 관람할 수 있다.​
+      ​1100고지 습지는 <u>한라산 고원지대에 형성된 대표적인 산지습지로서</u> 16개 이상의 습지가 불연속적으로 분포하고 있으며, 이 습지들을 따라 2009년에 습지보호지역이 설정되었으며 같은 해에 람사르 습지에 등록되었다.​​​​​​​​​​ 1100고지 습지의 동물과 식생환경에 대한 안내문이 탐방로 곳곳에 설치되어 있어 습지의 정보를 알 수 있다. 이곳에는 한라산에서만 서식하는 멸종위기 1급의 야생동물인 매와 야생생물 등이 존재하고 있으며, 습지의 낮은 곳에 고여있는 물은 야생동물의 식수원 역할을 하고 있다. 습지 안에는 나무로 이루어진 자연 생태탐방로가 있어 걸으면서 습지를 관람할 수 있다.​
     </p>
     <p>
             <div id="disqus_thread"></div>
